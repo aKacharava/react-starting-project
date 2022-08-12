@@ -28,14 +28,14 @@ function ErrorModal(props){
   return (
     <Fragment>
       {ReactDOM.createPortal(
-        <Backdrop onClick={props.onConfirm} />,
+        <Backdrop onConfirm={props.onConfirm} />,
         document.querySelector("#backdrop-root")
       )}
       {ReactDOM.createPortal(
         <ModalOverlay
           title={props.title}
           message={props.message}
-          onClick={props.onConfirm}
+          onConfirm={props.onConfirm}
         />,
         document.querySelector("#overlay-root")
       )}
