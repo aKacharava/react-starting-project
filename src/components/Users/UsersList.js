@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import Card from "../UI/Card";
 import styles from './UsersList.module.css'
 
@@ -8,7 +7,7 @@ function UsersList(props) {
       <ul>
         {props.users.map(function (user) {
           return (
-            <li>
+            <li key={user.id}>
               {user.name} ({user.age} Years old)
             </li>
           );
